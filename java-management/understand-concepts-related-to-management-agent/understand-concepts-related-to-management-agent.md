@@ -29,7 +29,7 @@ Before the set up of the Management Agent, it is important to understand the con
 
   ![image of java usage tracking service plugin](images/java-usage-tracking-service-plugin.png)
 
-- **Java Management Service plugin**: A Service Plugin responsible for enabling Java runtime Lifecycle Management, which is an advanced feature of JMS. This workshop will focus on the basics of JMS. If you would like to learn more about the Lifecycle Management feature, you may refer to [Using Java Management Service Advanced Features](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3202).
+- **Java Management Service plugin**: A Service Plugin responsible for enabling advanced features of JMS, such as Lifecycle Management. This workshop will focus on the basics of JMS. If you would like to learn more about the advanced features, you may refer to [Using Java Management Service Advanced Features](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3202).
 
   Java Management Service plugin is deployed in different ways on OCI and non-OCI Managed Instances. 
     * On non-OCI Managed Instances, it is deployed through Management Agent, and can be found under Observability & Management -> Management Agent -> Agents -> Deploy plug-ins. 
@@ -74,4 +74,4 @@ Before the set up of the Management Agent, it is important to understand the con
 ## Acknowledgements
 
 - **Author** - Xin Yi Tay, Java Management Service
-- **Last Updated By** - Ivan Eng, March 2023
+- **Last Updated By** - Ivan Eng, May 2023

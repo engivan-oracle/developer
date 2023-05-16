@@ -420,9 +420,9 @@ You may now **proceed to the next lab.**
 **For Task 3 Step 3**
 * If you encounter an error similar to the following:
     ```
-    Could not resolve hostname <hostname> in the installation environment. Resolve the hostname or provide the gatewayCertCommonName in the response file and rerun the gateway setup script.
+    Could not resolve hostname <hostname> in the installation environment. Resolve the hostname or provide the GatewayCertCommonName in the response file and rerun the gateway setup script.
     ```
-    Add the parameter **GatewayCertCommonName** = NewGatewayCert (Or any other name of your choice) in the gateway.rsp response file created earlier in [Task 1](?lab=multiple-managed-instances#task1preparegatewaysoftwareandresponsefileformanagementgatewayinstallation).
+    Add the parameter **GatewayCertCommonName** = test.gateway.com (or other Fully Qualified Domain Name of your choice) in the gateway.rsp response file created earlier in [Task 1](?lab=multiple-managed-instances#task1preparegatewaysoftwareandresponsefileformanagementgatewayinstallation).
 
 
 ## Learn More
@@ -435,4 +435,4 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 
 * **Author** - Bhuvesh Kumar, Java Management Service
-* **Last Updated By** - Ivan Eng, March 2023
+* **Last Updated By** - Ivan Eng, May 2023
