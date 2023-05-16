@@ -147,7 +147,7 @@ JMS also tap on the following OCI services to generate logs, object storage info
 
     ![image of analysis report object](images/analysis-report-object.png)
 
-    See [Object Storage Overview](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm) to read more about object storage service.
+    - See [Object Storage Overview](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm) to read more about object storage service.
 
 9. Monitoring Metrics Service
 
