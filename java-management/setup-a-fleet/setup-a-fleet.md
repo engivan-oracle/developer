@@ -148,7 +148,7 @@ You may now **proceed to the next lab**.
 
 ## Troubleshoot fleet creation issues
 
-If you encounter any errors similar to the following, please check policy statements related to user groups in your root compartment:
+If you encounter any errors similar to the following, please check policy statements in your root compartment:
 
 **For Task 1 Step 6: Create fleet**
 ![image of create fleet errors](images/create-fleet-errors.png =50%x*)
