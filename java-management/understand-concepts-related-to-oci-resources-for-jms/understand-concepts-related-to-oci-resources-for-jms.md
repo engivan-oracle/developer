@@ -78,7 +78,7 @@ This diagram illustrates the purpose of OCI resources and services in JMS with d
         </copy>
         ```
 
-        These policy statements allow JMS to work with services including monitoring metrics, logs and object storage in the fleet.
+        These policy statements allow JMS to work with services including monitoring metrics, logs in the fleet.
 
     When advanced features are enabled during the fleet creation, additional dynamic groups and policies would be automatically created in OCI.
     This allows JMS, the management agents and the compute instances to access object storage in the fleet for uploading of information such as crypto event analysis report and JDK Flight Recording data.
