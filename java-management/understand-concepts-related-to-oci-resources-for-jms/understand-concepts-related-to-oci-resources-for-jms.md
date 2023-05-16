@@ -33,7 +33,7 @@ This diagram illustrates the purpose of OCI resources and services in JMS with d
 
 3. Policies:
 
-    - See [Managing Policies](https://docs.oracle.com/en-us/iaas/Content/Identity/policieshow/how-policies-work.htm) for its definition and details.
+    - See [How Policies Work](https://docs.oracle.com/en-us/iaas/Content/Identity/policieshow/how-policies-work.htm) for its definition and details.
     - To enable basic features, policies are applied to three categories:
 
         A. User group "FLEET\_MANAGERS":
