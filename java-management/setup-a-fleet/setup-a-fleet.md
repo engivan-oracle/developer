@@ -145,6 +145,41 @@ In this lab, you will:
 
 You may now **proceed to the next lab**.
 
+
+## Troubleshoot fleet creation issues
+
+If you encounter any errors similar to the following, please check policy statements related to user groups in your root compartment:
+
+**For Task 1 Step 6: Create fleet**
+![image of create fleet errors](images/create-fleet-errors.png =50%x*)
+    ```
+    <copy>
+    ALLOW GROUP <user_group> TO MANAGE fleet IN COMPARTMENT <compartment_name>
+    ALLOW GROUP <user_group> TO MANAGE tag-namespaces IN TENANCY
+    ALLOW GROUP <user_group> TO MANAGE log-groups IN COMPARTMENT <compartment_name>
+    ALLOW GROUP <user_group> TO MANAGE log-content IN COMPARTMENT <compartment_name>
+    ALLOW GROUP <user_group> TO MANAGE management-agents IN COMPARTMENT <compartment_name>
+    ALLOW GROUP <user_group> TO MANAGE management-agent-install-keys IN COMPARTMENT <compartment_name>
+    ALLOW GROUP <user_group> TO MANAGE dynamic-groups IN TENANCY
+    ALLOW GROUP <user_group> TO MANAGE policies IN COMPARTMENT <compartment_name>
+    ALLOW GROUP <user_group> TO READ metrics IN COMPARTMENT <compartment_name>
+    ALLOW GROUP <user_group> TO READ instance-agent-plugins IN COMPARTMENT <compartment_name>
+    </copy>
+    ```
+
+**Fleet state failed**
+![image of failed fleet](images/failed-fleet.png)
+    ```
+    <copy>
+    ALLOW SERVICE javamanagementservice TO READ instances IN TENANCY
+    ALLOW SERVICE javamanagementservice TO INSPECT instance-agent-plugins IN TENANCY
+    ALLOW SERVICE javamanagementservice TO USE management-agent-install-keys IN COMPARTMENT <compartment_name>
+    ALLOW SERVICE javamanagementservice TO MANAGE metrics IN COMPARTMENT <compartment_name> WHERE target.metrics.namespace='java_management_service'
+    ALLOW SERVICE javamanagementservice TO MANAGE log-groups IN COMPARTMENT <compartment_name>
+    ALLOW SERVICE javamanagementservice TO MANAGE log-content IN COMPARTMENT <compartment_name>
+    </copy>
+    ```
+
 ## Learn More
 
 * Refer to the [Fleet Management](https://docs.oracle.com/en-us/iaas/jms/doc/fleet-management.html) section of the JMS documentation for more details.
@@ -158,4 +193,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 * **Author** - Esther Neoh, Java Management Service
-* **Last Updated By** - Ivan Eng, March 2023
+* **Last Updated By** - Ivan Eng, May 2023
