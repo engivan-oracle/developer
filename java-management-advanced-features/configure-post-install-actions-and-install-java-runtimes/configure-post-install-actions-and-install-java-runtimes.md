@@ -10,9 +10,9 @@ Estimated Time: 20 minutes
 
 In this lab, you will:
 
-   * Create a set of post java installation action consisting of changing the minimum key length for RSA to >2048 bits and disabling tls 1.0 and tls 1.1
+   * Create a set of post Java installation action consisting of changing the minimum key length for RSA to >2048 bits and disabling TLS 1.0 and TLS 1.1
    * Create a Install Java Runtime Work Request using the Java Management Service console interface.
-   * Verify Java Runtime installation and post java installation actions.
+   * Verify Java Runtime installation and post Java installation actions.
 
 
 ### Prerequisites
@@ -37,19 +37,19 @@ In this lab, you will:
 
    ![image of post java install action](images/post-java-install-action.png)
 
-5. Click on the combo box. A dropdown list of available post java installation actions will be shown.
+5. Click on the combo box. A dropdown list of available post Java installation actions will be shown.
 
    ![image of list of post java install action](images/post-java-install-action-list.png)
    
-   There are a total of 6 different post java installation actions to choose from.
+   There are a total of 6 different post Java installation actions to choose from.
    | Actions                                | Options   |
    |----------------------------------------|-----------|
+   | Replace JDK root certificates with default operating system certificates| N/A |
+   | Disable TLS                            | TLS 1.0 , TLS 1.0 and TLS 1.1 |
    | Change minimum key length for EC       | 256 bits|
+   | Change minimum key length for RSA      | 2048 bits |
    | Change minimum key length for DSA      | 2048 bits |
    | Change minimum key length for Diffie-Hellman | 2048 bits |
-   | Change minimum key length for RSA      | 2048 bits |
-   | Disable TLS                            | TLS 1.0 , TLS 1.0 and TLS 1.1 |
-   |Replace JDK root certificates with default operating system certificates| N/A |
    {: title="Available Post Java Installation Actions"}
 
 
@@ -57,13 +57,13 @@ In this lab, you will:
       * Minimum key length for RSA > 2048 bits (e.g. for signed jars)
       * Disable TLS 1.0 and TLS 1.1
 
-      The post java installation actions can be configured differently based on different requirements.
+      The post Java installation actions can be configured differently based on different requirements.
   
 7. Select the  **Change minimum key length for RSA** option from the dropdown list. Another combo box will appear to the right. This contains the new minimum key length (in bits) that will be set for RSA signed jars. Click on the combo box that appeared on the right. Select **2048**.
 
    ![image of LCM minimimum-rsa-key-length](images/lcm-minimum-rsa-key-length.png)
 
-8. Click on the **+ another action** button to add an additional post java installation action. Another combo box with the placeholder "Select an action" should appear in the next line. 
+8. Click on the **+ another action** button to add an additional post Java installation action. Another combo box with the placeholder "Select an action" should appear in the next line. 
 
    ![image of LCM add another action](images/lcm-add-another-action.png)
 
@@ -75,11 +75,11 @@ In this lab, you will:
 
    ![image of LCM disable tls options](images/lcm-disable-tls-options.png)
 
-10. Click on the **Save** button below. This should save all the defined post java installation actions.
+10. Click on the **Save** button below. This should save all the defined post Java installation actions.
 
     ![image of LCM post install action save](images/lcm-post-install-action-save.png)
 
-11. Return to the fleet details page, click on the tab **Lifecycle management settings**. The post java installation actions that had been defined earlier will be shown.
+11. Return to the fleet details page, click on the tab **Lifecycle management settings**. The post Java installation actions that had been defined earlier will be shown.
 
    ![image of fleet page post install action view](images/fleet-page-post-install-action-view.png)
 
@@ -89,7 +89,7 @@ In this lab, you will:
 
   ![image of install java runtime](images/install-java-runtime.png)
 
-2. You will see an Install Java runtime window with current and archive releases of the Oracle Java Runtimes. You will also see a Summary table that lists the metadata, including **Release versions**, **Security State**, **Release date**, **End of service life** and **Release notes**. You may click the link under Release notes to open the details page in a new window.
+2. You will see an Install Java runtime window with current and archive releases of the Oracle Java Runtimes. You will also see a Summary table that lists the metadata, including **Release versions**, **Security state**, **End of service life**, **Release date** and **Release notes**. You may click the link under Release notes to open the details page in a new window.
 
     ![image of install java runtime selection](images/install-java-runtime-selection.png)
 
@@ -97,13 +97,29 @@ In this lab, you will:
 
    ![image of install java runtime selected next](images/install-java-runtime-selected-next.png)
 
-4. The next page should display a list of post java installation actions which had been defined previously in [Task 1](#Task1:EnableandSetupPostJavaInstallationActions). Select the post java installation you want to perform. 
+4. The next page should display the advanced options for installing Java. Click **Install Java using Installer**, which will install Java to standard locations using executable installers.
+
+   ![image of install java advanced options](images/install-java-advanced-options.png)
+
+5. You can choose the type of Java installation by selecting the drop down list. Select **Headful**. Click **Next**.
+
+   ![image of select headful java](images/install-java-advanced-select-headful.png)
+
+   You can also choose to extract Java to a customized location. Click **Extract Java from compressed archive**.
+
+   ![image of extract java](images/install-java-advanced-with-extract.png)
+
+   Enter a valid and absolute directory path without any environment variables, for example /opt/for-demo. Click **Next**.
+
+   ![image of extract java with customized path](images/install-java-advanced-customized-path.png)
+
+6. The next page should display a list of post Java installation actions which had been defined previously in [Task 1](#Task1:EnableandSetupPostJavaInstallationActions). Select the post Java installation you want to perform. 
 
    ![image of install java runtime select post install action](images/install-java-runtime-select-post-install-action.png)
 
-   >**Note:** If no post java installation action is selected, no post-install action will be executed after the java installation
+   >**Note:** If no post Java installation action is selected, no post-install action will be executed after the Java installation
 
-5. Click **Install Java runtime** to confirm the installation and submit a request for installation. This request is termed as a **Work Request**.
+7. Click **Install Java runtime** to confirm the installation and submit a request for installation. This request is termed as a **Work Request**.
 
    ![image of install java runtime confirm](images/install-java-runtime-confirm.png)
 
@@ -126,19 +142,19 @@ In this lab, you will:
 3. If your request has completed successfully, the status will change to **Completed Without Errors**.
   ![image of install completed without errors](images/install-complete-without-errors.png)
 
-4. Click the **Log Message** under the **Resources** section. A series of logs will be displayed. Check that the java runtime has been installed.
+4. Click the **Log Message** under the **Resources** section. A series of logs will be displayed. Check that the Java runtime has been installed.
 
    ![image of install complete logs](images/install-complete-logs.png)
 
-   Check that the post java installation actions has been executed successfully.
+   Check that the post Java installation actions has been executed successfully.
 
    ![image of install complete logs post install action](images/install-complete-logs-post-install-action.png)
 
-5. Return to the fleet details page. Under the **Resources** menu, select **Java Runtimes**. This should display all the java runtimes found in the fleet. The installed java runtime should be indicated after next scanning. You can also check the installation manually on your Managed Instance.
+5. Return to the fleet details page. Under the **Resources** menu, select **Java Runtimes**. This should display all the Java runtimes found in the fleet. The installed Java runtime should be indicated after next scanning. You can also check the installation manually on your Managed Instance.
   ![image of verify java runtime installation](images/verify-java-runtime-installation.png)
 
 ## Task 4: (Optional) Modifying/Removing Post Java Installation Action
-1. This task is applicable if changes are to be made to the post java installation action.
+1. This task is applicable if changes are to be made to the post Java installation action.
 
 2. On the fleet details page, click on **More actions** and select **Modify Java runtime lifecycle management setting**. 
 
@@ -166,7 +182,7 @@ In this lab, you will:
 
 6. Once all the modifications are made, click on the **Save** button below to save all the changes
 
-7. Return to the fleet details page, click on the tab **Lifecycle management settings** to view the updated post java installation actions.
+7. Return to the fleet details page, click on the tab **Lifecycle management settings** to view the updated post Java installation actions.
 
  You may now **proceed to the next lab.**
 
