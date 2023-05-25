@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the steps to run Java performance analysis on a Java app on your Fleet.
+This lab walks you through the steps to run Java performance analysis on a Java application on your Fleet.
 
 Estimated Time: 30 mins
 
@@ -12,7 +12,7 @@ In this lab, you will:
 
 * Create a performance analysis work request using the Java Management Service on a Java application.
 * View and monitor the status of the Work Request created using the Java Manage Service console interface.
-* View the performance tuning recommendations of your Java application.
+* View the performance analysis results of your Java application.
 
 ### Prerequisites
 
@@ -21,7 +21,7 @@ In this lab, you will:
 * Access to the cloud environment and resources configured in Lab 1.
 * Have a Java application that is run with Java command line arguments.
 
-## Task 1: Submit performance analysis work request
+## Task 1: Submit Performance Analysis Work Request
 
 1. Open the navigation menu, click **Observability & Management**. Click **Fleets** under **Java Management**. Select the fleet that you have configured in [Lab 1](?lab=set-up-and-enable-advanced-features-on-java-management-service).
 
@@ -37,7 +37,7 @@ In this lab, you will:
 
     ![image of start performance analysis](images/managed-instance-applications-start-perf-analysis.png)
 
-4. In the Performance analysis window, lower the **Maximum recording duration** for each detected running application to 2 mins. 
+4. In the Performance analysis window, lower the **Maximum recording duration** for each detected running application to 2 mins. Click **Start** to submit the work request.
 
     > Note: Ensure your application runs longer then the duration specified.
 
@@ -61,7 +61,7 @@ In this lab, you will:
 
     >**Note:** It will take approximately 20 minutes for the request to be completed.
 
-8. Once the work request status shows **Completed without Errors**, scroll down to the **Resource** menu and select **Performance analysis reports**. 
+8. Once the work request status shows **Completed without Errors**, scroll down to the **Resources** menu and select **Performance analysis reports**. 
 
     You should see a list of Performance analysis reports that have been conducted in your Fleet. The latest **Performance analysis** that has been completed should be displayed at the top of the list.
 
@@ -71,9 +71,9 @@ In this lab, you will:
 
     ![image of performance analysis report details](images/perf-analysis-report-details.png)
 
-10. The performance tuning recommendations are shown under **Performance analysis result**.
+    The performance analysis result details are shown under **Performance analysis result**.
 
-11. You can hover over the information icon, and click **Learn more** to read more about the recommendation.
+10. You can hover over the information icon, and click **Learn more** to read more about the recommendation.
 
     ![image of performance tuning recommendation hint](images/perf-analysis-summary-hint.png)
 
@@ -117,6 +117,12 @@ In this lab, you will:
     </details>
 
 ## Learn More
+
+* Refer to the [Advanced Features](https://docs.oracle.com/en-us/iaas/jms/doc/advanced-features.html), [Work Request](https://docs.oracle.com/en-us/iaas/jms/doc/getting-started-java-management-service.html#GUID-47C63464-BC0C-4059-B552-ED9F33E77ED3) and [Fleet Work Requests](https://docs.oracle.com/en-us/iaas/jms/doc/fleet-work-requests.html) sections of the JMS documentation for more details.
+
+* Use the [Troubleshooting](https://docs.oracle.com/en-us/iaas/jms/doc/troubleshooting.html#GUID-2D613C72-10F3-4905-A306-4F2673FB1CD3) chapter for explanations on how to diagnose and resolve common problems encountered when installing or using Java Management Service.
+
+* If the problem still persists or it is not listed, then refer to the [Getting Help and Contacting Support](https://docs.oracle.com/en-us/iaas/Content/GSG/Tasks/contactingsupport.htm) section. You can also open a support service request using the **Help** menu in the OCI console.
 
 ## Acknowledgements
 
