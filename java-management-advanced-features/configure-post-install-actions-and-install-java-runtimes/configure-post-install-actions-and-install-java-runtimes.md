@@ -196,4 +196,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Author** - Yixin Wei, Java Management Service
-* **Last Updated By** - Sherlin Yeo, March 2023
+* **Last Updated By** - Ivan Eng, May 2023
