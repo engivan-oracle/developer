@@ -341,10 +341,11 @@ We shall demonstrate the detection of the Java compiler and HelloWorld applicati
      </copy>
      ```
 
-   Lastly, execute the HelloWorld applications in these two paths by running the following command in both the main direction and introduction subdirectory:
+   Lastly, execute the HelloWorld applications in these two paths by running the following command in the main direction and introduction subdirectory:
      ```
      <copy>
-     java -jar HelloWorld.jar
+     java -jar ./HelloWorld.jar
+     java -jar ./introduction/HelloWorld.jar
      </copy>
      ```
 
