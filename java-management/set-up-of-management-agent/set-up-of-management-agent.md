@@ -319,13 +319,36 @@ We shall demonstrate the detection of the Java compiler and HelloWorld applicati
      </copy>
      ```
 
-   Then execute the HelloWorld application:
+   Second, run the following command to create a HelloWorld jar file:
 
      ```
      <copy>
-     java HelloWorld
+     jar -cfe HelloWorld.jar HelloWorld HelloWorld.class
      </copy>
      ```
+
+   Third, create a new directory by entering this command:
+     ```
+     <copy>
+     sudo mkdir introduction
+     </copy>
+     ```
+
+   Fourth, enter this command to copy the HelloWorld.jar file into the introduction sub-directory
+     ```
+     <copy>
+     sudo cp HelloWorld.jar introduction
+     </copy>
+     ```
+
+   Lastly, execute the HelloWorld applications in these two paths by running the following command in both the main direction and introduction subdirectory:
+     ```
+     <copy>
+     java -jar HelloWorld.jar
+     </copy>
+     ```
+
+   This ensures the same name Java application is installed and deployed in two different paths for detection by JMS.
 
 2. In the Oracle Cloud Console, open the navigation menu, click **Observability & Management**, and then click **Fleets** under **Java Management**.
 
@@ -345,9 +368,17 @@ We shall demonstrate the detection of the Java compiler and HelloWorld applicati
 
   ![image of runtimes after successful installation on oci host](images/successful-installation-oci.png)
 
-5. Click **Applications** under **Resources**. You should now see two applications. The first is from the HelloWorld application and the second is from the javac compiler command.
+5. Click **Applications** under **Resources**. You should now see two new applications. The first is from the HelloWorld application and the second is from the javac compiler command.
 
   ![image of applications after successful installation](images/successful-installation-applications.png)
+
+6. Click on the HelloWorld application to view the details of HelloWorld application. Click on **Application installations** under **Resources** and the two paths that HelloWorld application is installed in would be shown under **Application installation path**.
+
+  ![image of application installation path](images/application-installation-path.png)
+
+7. The application installation path can also be viewed under Fleet management → Resources (Managed Instances) → Select an instance to click on → Resources (Applications).
+
+  ![image of managed instance applications page](images/managed-instance-applications.png)
 
 You may now **proceed to the next lab.**
 

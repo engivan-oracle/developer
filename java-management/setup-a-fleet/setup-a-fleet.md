@@ -38,11 +38,13 @@ In this lab, you will:
 
   ![image of agree advanced features](images/select-advanced-agree.png)
 
-  There are 4 different advanced features available:
+  There are 6 different advanced features available:
      * Lifecycle management (LCM) - Manage the lifecycle of Java runtimes in your fleet by installing or removing reported Java runtime.
      * Advanced usage tracking - Gain advanced insights into your Java workloads in the fleet by tracking application server, Oracle JDK and openJDK used by applications.
      * Crypto event analysis - Assess the impact of Oracle JRE and JDK Cryptographic roadmap on the applications running in your fleet.
+     * Performance analysis - Evaluates applications and provides customized recommendations to improve performance.
      * JDK Flight Recorder (JFR) - Collect information about events in the application running in your fleet using JDK Flight Recorder (JFR), a tool for collecting diagnostic and profiling data about a running Java application.
+     * Java migration analysis - Assists in migrating applications from older JDK versions to newer JDK version by providing a detailed analysis that helps to assess the potential efforts and risks of migration.
 
 
   To learn more about the advanced features, see [Using Java Management Service Advanced Features](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3202).
@@ -137,7 +139,7 @@ In this lab, you will:
     <copy>
     ALLOW dynamic-group JMS_Advanced_Features_INSTANCE_PRINCIPALS_GROUP to MANAGE object-family in compartment Fleet_Compartment
     ALLOW dynamic-group JMS_Advanced_Features_MACS_GROUP to MANAGE objects in compartment Fleet_Compartment
-    ALLOW service javamanagementservice to MANAGE object-family in compartment Fleet_Compartment
+    ALLOW resource jms server-components to MANAGE object-family in compartment Fleet_Compartment
     </copy>
     ```
 
@@ -233,12 +235,12 @@ If you encounter any errors similar to the following, please check policy statem
 ![image of failed fleet](images/failed-fleet.png)
     ```
     <copy>
-    ALLOW SERVICE javamanagementservice TO READ instances IN TENANCY
-    ALLOW SERVICE javamanagementservice TO INSPECT instance-agent-plugins IN TENANCY
-    ALLOW SERVICE javamanagementservice TO USE management-agent-install-keys IN COMPARTMENT <compartment_name>
-    ALLOW SERVICE javamanagementservice TO MANAGE metrics IN COMPARTMENT <compartment_name> WHERE target.metrics.namespace='java_management_service'
-    ALLOW SERVICE javamanagementservice TO MANAGE log-groups IN COMPARTMENT <compartment_name>
-    ALLOW SERVICE javamanagementservice TO MANAGE log-content IN COMPARTMENT <compartment_name>
+    ALLOW resource jms server-components TO MANAGE log-groups IN COMPARTMENT <compartment_name>
+    ALLOW resource jms server-components TO MANAGE log-content IN COMPARTMENT <compartment_name>
+    ALLOW resource jms server-components TO USE management-agent-install-keys IN COMPARTMENT <compartment_name>
+    ALLOW resource jms server-components TO MANAGE metrics IN COMPARTMENT <compartment_name> WHERE target.metrics.namespace='java_management_service'
+    ALLOW resource jms server-components TO READ instances IN tenancy
+    ALLOW resource jms server-components TO INSPECT instance-agent-plugins IN tenancy
     </copy>
     ```
 

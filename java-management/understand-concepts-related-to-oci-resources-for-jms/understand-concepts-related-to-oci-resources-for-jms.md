@@ -66,15 +66,15 @@ This diagram illustrates the purpose of OCI resources and services in JMS with d
 
         These policy statements allow compute instances and management agents in this dynamic group to communicate information to OCI.
 
-        C. Service "javamanagementservice":
+        C. Resource "jms server-components":
         ```
         <copy>
-        ALLOW SERVICE javamanagementservice TO MANAGE log-groups IN COMPARTMENT Fleet_Compartment
-        ALLOW SERVICE javamanagementservice TO MANAGE log-content IN COMPARTMENT Fleet_Compartment
-        ALLOW SERVICE javamanagementservice TO MANAGE metrics IN COMPARTMENT Fleet_Compartment WHERE target.metrics namespace='java_management_service'
-        ALLOW SERVICE javamanagementservice TO READ instances IN tenancy
-        ALLOW SERVICE javamanagementservice TO INSPECT instance-agent-plugins IN tenancy
-        ALLOW SERVICE javamanagementservice TO USE management-agent-install-keys IN COMPARTMENT Fleet_Compartment
+        ALLOW resource jms server-components TO MANAGE log-groups IN COMPARTMENT Fleet_Compartment
+        ALLOW resource jms server-components TO MANAGE log-content IN COMPARTMENT Fleet_Compartment
+        ALLOW resource jms server-components TO USE management-agent-install-keys IN COMPARTMENT Fleet_Compartment
+        ALLOW resource jms server-components TO MANAGE metrics IN COMPARTMENT Fleet_Compartment WHERE target.metrics.namespace='java_management_service'
+        ALLOW resource jms server-components TO READ instances IN tenancy
+        ALLOW resource jms server-components TO INSPECT instance-agent-plugins IN tenancy
         </copy>
         ```
 

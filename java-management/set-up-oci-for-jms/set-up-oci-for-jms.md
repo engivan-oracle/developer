@@ -287,12 +287,12 @@ Sign in to the Oracle Cloud Console as an administrator using the credentials pr
     ALLOW DYNAMIC-GROUP JMS_DYNAMIC_GROUP TO USE METRICS IN COMPARTMENT Fleet_Compartment
     ALLOW DYNAMIC-GROUP JMS_DYNAMIC_GROUP TO MANAGE log-content IN COMPARTMENT Fleet_Compartment
 
-    ALLOW SERVICE javamanagementservice TO MANAGE metrics IN COMPARTMENT Fleet_Compartment WHERE target.metrics.namespace='java_management_service'
-    ALLOW SERVICE javamanagementservice TO MANAGE log-groups IN COMPARTMENT Fleet_Compartment
-    ALLOW SERVICE javamanagementservice TO MANAGE log-content IN COMPARTMENT Fleet_Compartment
-    ALLOW SERVICE javamanagementservice TO READ instances IN tenancy
-    ALLOW SERVICE javamanagementservice TO INSPECT instance-agent-plugins IN tenancy
-    ALLOW SERVICE javamanagementservice TO USE management-agent-install-keys IN COMPARTMENT Fleet_Compartment
+    ALLOW resource jms server-components TO MANAGE log-groups IN COMPARTMENT Fleet_Compartment
+    ALLOW resource jms server-components TO MANAGE log-content IN COMPARTMENT Fleet_Compartment
+    ALLOW resource jms server-components TO USE management-agent-install-keys IN COMPARTMENT Fleet_Compartment
+    ALLOW resource jms server-components TO MANAGE metrics IN COMPARTMENT Fleet_Compartment WHERE target.metrics.namespace='java_management_service'
+    ALLOW resource jms server-components TO READ instances IN tenancy
+    ALLOW resource jms server-components TO INSPECT instance-agent-plugins IN tenancy
     </copy>
     ```
     ![image of policies create page](images/policies-create-example.png)
