@@ -74,4 +74,4 @@ Before the set up of the Management Agent, it is important to understand the con
 ## Acknowledgements
 
 - **Author** - Xin Yi Tay, Java Management Service
-- **Last Updated By** - Ivan Eng, March 2023
+- **Last Updated By** - Ivan Eng, May 2023

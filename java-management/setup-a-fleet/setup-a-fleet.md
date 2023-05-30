@@ -79,7 +79,7 @@ In this lab, you will:
 
 10. Change the **Java Runtime Usage**, **Agent Polling Interval**, **Work Request Validity** and  **Java Runtime Discovery** to the desired value. 
 
-    **Java Runtime Usage**: How frequent agents reports Java usage. 
+    **Java Runtime Usage**: How frequent agents reports Java usage.
 
     **Agent Polling Interval**: How frequent which agents check for work request to execute.
  
