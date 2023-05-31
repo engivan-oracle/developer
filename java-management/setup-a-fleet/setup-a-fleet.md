@@ -176,7 +176,7 @@ JMS also tap on the following OCI services to generate logs, object storage info
 
 2. Object Storage Service
 
-    - This is required for JMS advanced features, such as JDK Flight Recording (JFR) and Crypto event analysis, where the recordings are uploaded to object storage before JMS retrieves the recording to perform crypto event analysis. The resulting analysis report is then uploaded to object storage.
+    - This is required for some of the advanced features of JMS and will be explained in the further workshop: [Using Java Management Service Advanced Features](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3202)
 
     - The object storage bucket serves as the storage for resources such as JFR files and analysis reports.
 

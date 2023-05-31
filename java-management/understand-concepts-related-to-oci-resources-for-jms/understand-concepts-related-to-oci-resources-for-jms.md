@@ -103,6 +103,8 @@ This diagram illustrates the purpose of OCI resources and services in JMS with d
 
     - With the tag link, these agents can send data back to the fleet in OCI, which JMS can process and manage. Users can then observe and monitor the Java related data e.g. usage tracking associated with each Managed Instance.
 
+JMS also tap on the following OCI services (7.Logging Service, 8. Object Storage Service, 9. Monitoring Metrics Service) to generate logs, object storage information and monitoring metrics of the fleet for the users to view. These services will be explained after the set up of JMS fleet, under [Lab 3 Task 3](?lab=setup-a-fleet#Task3:UnderstandingtheOracleCloudInfrastructureServiceswhichJavaManagementServiceleverageson).
+
 You may now **proceed to the next lab.**
 
 ## Learn More

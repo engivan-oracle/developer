@@ -19,7 +19,7 @@ In this lab, you will:
 
 - You have signed up for an account with Oracle Cloud Infrastructure and have received your sign-in credentials.
 - You are using an Oracle Linux image or Windows OS on your Managed Instance for this lab.
-- Access to the cloud environment and resources configured in [Lab 2](?lab=setup-a-fleet).
+- Access to the cloud environment and resources configured in [Lab 2](?lab=set-up-oci-for-jms).
 - You have installed the latest version of Oracle JDK 8 in your machine according to [Lab 3 Task 3](?lab=deploy-a-java-application#Task3:InstallJava8andcreateasimpleJavaapplication).
 
 ## Task 1: Install Management Agent on an OCI Host
@@ -341,7 +341,7 @@ We shall demonstrate the detection of the Java compiler and HelloWorld applicati
      </copy>
      ```
 
-   Lastly, execute the HelloWorld applications in these two paths by running the following command in the main direction and introduction subdirectory:
+   Lastly, execute the HelloWorld applications in these two paths by running the following commands:
      ```
      <copy>
      java -jar ./HelloWorld.jar
