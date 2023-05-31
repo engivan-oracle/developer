@@ -176,23 +176,9 @@ JMS also tap on the following OCI services to generate logs, object storage info
 
 2. Object Storage Service
 
-    - This is required for some of the advanced features of JMS and will be explained in the further workshop: [Using Java Management Service Advanced Features](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3202)
+    - This is required for some of the advanced features of JMS and will be explained in the next workshop: [Using Java Management Service Advanced Features](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=3202)
 
     - The object storage bucket serves as the storage for resources such as JFR files and analysis reports.
-
-    To access the object storage associated with the fleet, click on the object storage bucket link.
-
-    ![image of object storage in fleet main page](images/fleet-object-storage.png)
-
-    Scroll down the object storage bucket details page.
-
-    ![image object storage bucket details](images/object-storage-bucket-details.png)
-
-    You should be able to see the objects created by JMS advanced features, such as analysis reports.
-
-    ![image of analysis report object](images/analysis-report-object.png)
-
-    - See [Object Storage Overview](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm) to read more about object storage service.
 
 3. Monitoring Metrics Service
 
